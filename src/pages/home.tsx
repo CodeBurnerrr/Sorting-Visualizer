@@ -1,5 +1,5 @@
 import '../Styles/home.css';
-import icon from '../assets/right.svg';
+import icon from '../assets/images/right.svg';
 import {useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 import Particle from "../components/particles.tsx";
