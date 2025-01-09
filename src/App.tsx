@@ -1,5 +1,5 @@
-import Home from './Pages/Home.tsx'
-import SortingPage from "./Pages/SortingPage.tsx";
+import Home from './pages/home.tsx'
+import SortingPage from "./pages/sortingPage.tsx";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 

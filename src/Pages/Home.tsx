@@ -2,7 +2,7 @@ import '../Styles/home.css';
 import icon from '../assets/right.svg';
 import {useNavigate} from 'react-router-dom';
 import { useState } from 'react';
-import Particle from "../Components/particles.tsx";
+import Particle from "../components/particles.tsx";
 
 const Home = () => {
     const [isSliding, setIsSliding] = useState(false);

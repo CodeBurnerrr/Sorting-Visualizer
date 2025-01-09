@@ -1,7 +1,8 @@
-import Header from '../Components/header.tsx';
-import Graph from "../Components/graph.tsx";
+import Header from '../components/header.tsx';
+import Graph from "../components/graph.tsx";
 import { useEffect, useState } from "react";
 import { PacmanLoader } from 'react-spinners';
+import '../Styles/sortingPage.css'
 
 const SortingPage = () => {
     const [isSliding, setIsSliding] = useState(false);
