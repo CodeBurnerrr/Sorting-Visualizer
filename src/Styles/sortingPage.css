@@ -1,0 +1,79 @@
+.graphContainer{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.Graph{
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    gap: 5px;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+}
+
+.Bar {
+    background-color: #3ac7ff;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+
+}
+
+.button {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    background-color: #3ac7ff;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+
+}
+
+.slider {
+    margin-top: 12px;
+    margin-left: 50px;
+}
+
+.lengthBox {
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    width: 30px;
+    border-radius: 100px;
+
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: transform 1s ease-out;
+}
+
+.loader.slide-out {
+    transform: translateX(-100%);
+}
