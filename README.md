@@ -9,10 +9,10 @@ Sorting Visualizer is an interactive web application built with React, TypeScrip
 - 🎨 **Interactive Visualization**: Watch how the algorithms sort arrays step-by-step.
 - ⚡ **Multiple Algorithms**: Includes popular sorting algorithms such as:
   - Bubble Sort
-  - Selection Sort
-  - Insertion Sort
-  - Merge Sort
-  - Quick Sort
+  - Selection Sort (upcoming shortly!)
+  - Insertion Sort (upcoming shortly!)
+  - Merge Sort (upcoming shortly!)
+  - Quick Sort (upcoming shortly!)
 - 🛠️ **Customizability**:
   - Adjust the array size.
   - Change the sorting speed.
@@ -43,6 +43,8 @@ Sorting Visualizer is an interactive web application built with React, TypeScrip
 2. **Install dependencies**:
    ```bash
    npm install
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
    ```
 
 3. **Start the development server**:
