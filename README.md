@@ -76,7 +76,7 @@ Sorting Visualizer is an interactive web application built with React, TypeScrip
 
 ---
 
-## 📸 Screenshots
+## 👀 Preview
 
 ### Home Page
 ![Sorting Visualizer Home Page](screenshots/home.png)
@@ -92,7 +92,6 @@ https://github.com/user-attachments/assets/aab989f3-c1d2-4efa-b12e-121abc724bfa
 
 - Add more sorting algorithms (e.g., Heap Sort, Radix Sort).
 - Display time and space complexity of each algorithm during visualization.
-- Support for dark mode.
 - Add responsive design for support across all devices
 
 ---
