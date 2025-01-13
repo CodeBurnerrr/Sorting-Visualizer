@@ -36,8 +36,8 @@ Sorting Visualizer is an interactive web application built with React, TypeScrip
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/CodeBurnerrr/Algorithm-Visualizer.git
-   cd algorithm-visualizer
+   git clone https://github.com/CodeBurnerrr/Sorting-Visualizer.git
+   cd sorting-visualizer
    ```
 
 2. **Install dependencies**:
