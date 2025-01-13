@@ -110,5 +110,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🌟 Acknowledgements
 
 - Inspired by various sorting visualizer projects available online.
-- Built with ❤️, React TypeScript, and Redux.
+- Built with ❤️, React TypeScript, and Redux (and probably a few accidental bugs).
+- Powered by ☕️ caffeine and the occasional "why isn't this working" moment 🤔💻! 
 
