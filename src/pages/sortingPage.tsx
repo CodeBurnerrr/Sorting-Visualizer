@@ -1,7 +1,7 @@
 import Header from '../components/header.tsx';
 import Graph from "../components/graph.tsx";
 import { useEffect, useState } from "react";
-import { PacmanLoader } from 'react-spinners';
+import {GridLoader} from 'react-spinners'
 import '../Styles/sortingPage.css'
 
 const SortingPage = () => {
@@ -33,7 +33,7 @@ const SortingPage = () => {
                 </>
             ) : (
                 <div className={`loader ${isSliding ? 'slide-out' : ''}`}>
-                    <PacmanLoader color="#3ac7ff" size={45} />
+                    <GridLoader color="white" size={35} />
                 </div>
             )}
         </>

@@ -4,16 +4,18 @@
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    font-family: "Rubik Vinyl", serif;
-    color: #20cfff;
-    font-size: 90px;
+    font-family: "Doto";
+    /*color: #20cfff;*/
+    color:white;
+    font-size: 80px;
     flex-direction: column;
     font-weight: bold;
 }
 
 .next-button {
     width: 60px;
-    background-color: #3ac7ff;
+    /*background-color: #3ac7ff;*/
+    background-color: white;
     color: black;
     outline: none;
     border: none;

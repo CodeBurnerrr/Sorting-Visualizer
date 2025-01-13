@@ -15,7 +15,7 @@
 }
 
 .Bar {
-    background-color: #3ac7ff;
+    background-color: white;
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -29,6 +29,17 @@
     justify-content: center;
     padding: 10px;
 
+}
+
+.headerTitle{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left:10px;
+    font-family: "Doto";
+    color: White;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .button {
@@ -110,6 +121,16 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
 }
+
+
+.selectionBox{
+    border-color: #3ac7ff;
+    background-color: #3ac7ff;
+    height: 30px;
+    color: white;
+}
+
+

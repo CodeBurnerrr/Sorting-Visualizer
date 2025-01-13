@@ -55,15 +55,15 @@ const Particle = () => {
             },
             particles: {
                 color: {
-                    value: "#01a8cc",
+                    value: "#ffffff",
                 },
-                links: {
-                    color: "#0385a2",
-                    distance: 100,
-                    enable: true,
-                    opacity: 0.5,
-                    width: 2,
-                },
+                // links: {
+                //     color: "white",
+                //     distance: 100,
+                //     enable: true,
+                //     opacity: 0.5,
+                //     width: 2,
+                // },
                 move: {
                     direction: MoveDirection.none,
                     enable: true,
@@ -84,7 +84,7 @@ const Particle = () => {
                     value: 0.5,
                 },
                 shape: {
-                    type: "circle",
+                    type: "square",
                 },
                 size: {
                     value: {min: 1, max: 5},

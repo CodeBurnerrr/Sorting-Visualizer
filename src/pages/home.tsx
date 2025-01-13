@@ -20,7 +20,7 @@ const Home = () => {
     return (
         <>
             <div className={`heading ${isSliding ? 'slide-out' : ''}`}>
-                <center>Algorithm <br/> Visualizer</center>
+                <center>Sorting <br/> Visualizer</center>
                 <button className="next-button" onClick={handleRedirect}>
                     <img src={icon} alt="Right Icon" style={{width: '20px'}}/>
                 </button>
