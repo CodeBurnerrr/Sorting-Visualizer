@@ -9,13 +9,15 @@ const Graph = () => {
     const length = useSelector((state: RootState) => state.length.value)
     const array = useSelector((state: RootState) => state.array.value)
 
+
     const [width, setWidth] = useState<number>((window.innerWidth - 700) / 50);
     const [windowsWidth, setWindowsWidth] = useState<number>(0);
 
     const springAnimation = {
         type: "spring",
-        damping: 20,
-        stiffness: 300
+        visualDuration: 0.2,
+        bounce: 0.57,
+        stiffness: 100
     };
 
     window.addEventListener("resize", () => {
@@ -26,6 +28,7 @@ const Graph = () => {
 
     useEffect(() => {
         setWidth((windowsWidth - (700)) / (length));
+
     }, [length])
 
     useEffect(() => {
@@ -47,7 +50,7 @@ const Graph = () => {
                             style={{height: `${item.value * 5}px`, width: `${width}px`}}
                             id={item.id}
 
-                        ></motion.div>
+                        > {length<=30 && item.value} </motion.div>
                     ))}
                 </div>
             </div>

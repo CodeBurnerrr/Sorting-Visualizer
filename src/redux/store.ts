@@ -1,11 +1,15 @@
 import {configureStore} from "@reduxjs/toolkit";
 import lengthReducer from './slices/arrayLengthSlice.ts'
 import arrayReducer from './slices/arraySlice.ts'
+import ongoingReducer from './slices/ongoingSlice.ts'
+import startStopReducer from './slices/startStopSlice.ts'
 
 export  const store = configureStore({
     reducer: {
         length: lengthReducer,
-        array: arrayReducer
+        array: arrayReducer,
+        ongoing: ongoingReducer,
+        startStop: startStopReducer,
     }
 })
 

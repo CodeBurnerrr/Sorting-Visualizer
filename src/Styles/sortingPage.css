@@ -18,6 +18,8 @@
     background-color: #3ac7ff;
     display: flex;
     justify-content: center;
+    font-weight: bold;
+    color: black;
 
 }
 
@@ -26,7 +28,6 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-
 
 }
 
@@ -88,4 +89,27 @@
 }
 .bar-compare{
     background-color: #ff0000;
+}
+
+.stop{
+    background-color: red;
+    margin-left: 120px;
+    width: 120px;
+
+}
+
+
+.pauseIcon{
+    width: 40px;
+    cursor: pointer;
+
+}
+
+.iconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
