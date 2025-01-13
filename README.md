@@ -80,7 +80,7 @@ Sorting Visualizer is an interactive web application built with React, TypeScrip
 ![Sorting Visualizer Home Page](screenshots/home.png)
 
 ### Bubble Sort in Action
-![Bubble Sort Visualization]([https://via.placeholder.com/800x400](https://github.com/user-attachments/assets/d10b6fbd-51a0-4870-ac02-918670f547db))
+![Bubble Sort Visualization](https://github.com/user-attachments/assets/d10b6fbd-51a0-4870-ac02-918670f547db)
 
 ---
 
