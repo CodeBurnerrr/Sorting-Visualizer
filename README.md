@@ -17,6 +17,7 @@ Sorting Visualizer is an interactive web application built with React, TypeScrip
   - Adjust the array size.
   - Change the sorting speed.
   - Generate new random arrays.
+  - Allow users to pause and resume visualization.
 - 🔄 **State Management with Redux**: All app states, such as the array data, sorting speed, and algorithm selection, are managed centrally with Redux.
 - 📚 **Educational Tool**: Perfect for learning the internal workings of sorting algorithms.
 
