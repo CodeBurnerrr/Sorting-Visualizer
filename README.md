@@ -1,50 +1,112 @@
-# React + TypeScript + Vite
+# Sorting Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sorting Visualizer is an interactive web application built with React, TypeScript, and Redux to help users visualize how different sorting algorithms work. This project is perfect for students, educators, and anyone curious about understanding sorting algorithms in an intuitive and fun way.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🎨 **Interactive Visualization**: Watch how the algorithms sort arrays step-by-step.
+- ⚡ **Multiple Algorithms**: Includes popular sorting algorithms such as:
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Merge Sort
+  - Quick Sort
+- 🛠️ **Customizability**:
+  - Adjust the array size.
+  - Change the sorting speed.
+  - Generate new random arrays.
+  - Allow users to pause and resume visualization.
+- 🔄 **State Management with Redux**: All app states, such as the array data, sorting speed, and algorithm selection, are managed centrally with Redux.
+- 📚 **Educational Tool**: Perfect for learning the internal workings of sorting algorithms.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Frontend**: React (with TypeScript)
+- **State Management**: Redux Toolkit
+- **Styling**: Tailwind CSS 
+- **Build Tool**: Vite 
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📦 Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/CodeBurnerrr/Sorting-Visualizer.git
+   cd sorting-visualizer
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the app**:
+   Navigate to `http://localhost:5173` in your browser.
+
+---
+
+## 🔧 Usage
+
+1. **Select an Algorithm**: Choose the sorting algorithm you want to visualize.
+2. **Customize the Array**:
+   - Adjust the size of the array using the slider.
+   - Change the sorting speed.
+3. **Start Visualization**: Click on the "Sort" button to watch the sorting process.
+4. **Reset or Generate New Array**: Click on the "Generate Array" button to reset or create a new array.
+
+---
+
+## 🌟 Features Powered by Redux
+
+- **Centralized State**: The array data, sorting algorithm, and speed are all managed globally for better performance and maintainability.
+- **Real-time Updates**: Changes in controls instantly reflect in the visualization due to Redux state synchronization.
+- **Extensibility**: Easily add new features by extending the Redux store.
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Sorting Visualizer Home Page](https://via.placeholder.com/800x400)
+
+### Bubble Sort in Action
+![Bubble Sort Visualization](https://via.placeholder.com/800x400)
+
+---
+
+## 🚧 Future Enhancements
+
+- Add more sorting algorithms (e.g., Heap Sort, Radix Sort).
+- Display time and space complexity of each algorithm during visualization.
+- Support for dark mode.
+- Add responsive design for support across all devices
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to create an issue or submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🌟 Acknowledgements
+
+- Inspired by various sorting visualizer projects available online.
+- Built with ❤️, React TypeScript, and Redux.
+
