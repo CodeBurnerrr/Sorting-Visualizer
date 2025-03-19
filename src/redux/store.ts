@@ -3,6 +3,7 @@ import lengthReducer from './slices/arrayLengthSlice.ts'
 import arrayReducer from './slices/arraySlice.ts'
 import ongoingReducer from './slices/ongoingSlice.ts'
 import startStopReducer from './slices/startStopSlice.ts'
+import sortSelectReducer from './slices/sortSelectSlice.ts'
 
 export  const store = configureStore({
     reducer: {
@@ -10,6 +11,7 @@ export  const store = configureStore({
         array: arrayReducer,
         ongoing: ongoingReducer,
         startStop: startStopReducer,
+        sortSelect: sortSelectReducer,
     }
 })
 

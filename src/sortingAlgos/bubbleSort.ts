@@ -61,6 +61,8 @@ export const BubbleSort = (
     array: { value: number; id: string; style: string }[],
     length: number
 ) => {
+
+
     const result: { value: number; id: string; style: string }[][] = [];
 
     let temp: { value: number; id: string; style: string }[] = array.map(item => ({ ...item }));
@@ -81,11 +83,9 @@ export const BubbleSort = (
                 temp[j + 1].style = "bar-swap";
                 result.push([...temp]);
 
-
                 [temp[j], temp[j + 1]] = [temp[j + 1], temp[j]];
 
                 temp = temp.map(item => ({ ...item }));
-
 
                 temp[j].style = "";
                 temp[j + 1].style = "bar-sorted";

@@ -6,11 +6,13 @@ import {update as updateLength} from "../redux/slices/arrayLengthSlice.ts";
 import {update as updateArray} from "../redux/slices/arraySlice.ts";
 import {useEffect, useRef, useState} from "react";
 import {BubbleSort} from "../sortingAlgos/bubbleSort.ts"
+import {MergeSort} from "../sortingAlgos/mergeSort.ts";
 import {change as ongoingChange} from '../redux/slices/ongoingSlice.ts'
 import {change as startStop} from "../redux/slices/startStopSlice.ts"
 import pauseIcon from '../assets/images/icons8-pause.svg'
 import playIcon from '../assets/images/icons8-play.svg'
-
+import {change as sortChange} from "../redux/slices/sortSelectSlice.ts";
+import {SelectionSort} from "../sortingAlgos/selectionSort.ts";
 
 const Header = () => {
 
@@ -18,6 +20,10 @@ const Header = () => {
     const array = useSelector((state: RootState) => state.array.value)
     const play = useSelector((state: RootState) => state.startStop.value)
     const reset = useSelector((state: RootState) => state.ongoing.value)
+    const currentSort = useSelector((state:RootState)=>state.sortSelect.value)
+
+    const [sortingInProgress, setSortingInProgress] = useState(false)
+
     const lastIndexRef = useRef<number>(0)
     const playRef = useRef(play);
     const resultRef: React.MutableRefObject<{ value: number; id: string; style: string }[][]> = useRef([[{
@@ -35,11 +41,17 @@ const Header = () => {
     const [speed, setSpeed] = useState(1);
     const dispatch = useDispatch();
 
+
+    const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const newValue = event.target.value;
+        dispatch(sortChange(newValue));
+    };
+
+
     const handleSpeed = (_event: Event, newValue: number | number[]) => {
         if (typeof (newValue) === "number") {
             setSpeed(newValue);
         }
-
     }
 
     const handleChange = (_event: Event, newValue: number | number[]) => {
@@ -80,11 +92,28 @@ const Header = () => {
     let result: { value: number; id: string; style: string }[][];
 
     const handleBubbleSort = () => {
+        setSortingInProgress(true)
         if (!playRef) {
             dispatch(startStop());
         }
-        result = BubbleSort(array.arr, length)
-        resultRef.current = result
+
+        switch (currentSort) {
+            case "Bubble":
+                result = BubbleSort(array.arr, length);
+                resultRef.current = result
+                break;
+
+            case "Merge":
+                result = MergeSort(array.arr, length);
+                resultRef.current = result
+                break;
+
+            case 'Selection':
+                result = SelectionSort(array.arr, length);
+                resultRef.current = result
+                break;
+        }
+
         dispatch(ongoingChange())
         runAnimation().then().catch(err => (console.log(err)))
     }
@@ -96,7 +125,6 @@ const Header = () => {
 
 
     const runAnimation = async () => {
-
 
         if (playRef) {
             playRef.current = false
@@ -123,6 +151,9 @@ const Header = () => {
                     lastIndexRef.current = 0
 
                 }
+                if(i == resultRef.current.length - 1) {
+                    setSortingInProgress(false)
+                }
                 await sleep(1000 / speed)
 
             } else {
@@ -131,7 +162,6 @@ const Header = () => {
             }
         }
 
-
     }
 
 
@@ -139,7 +169,6 @@ const Header = () => {
         if (!play) {
             dispatch(startStop())
         }
-
 
     }
 
@@ -152,6 +181,7 @@ const Header = () => {
     }
 
     const handleReset = () => {
+        setSortingInProgress(false)
         if (play) {
             dispatch(startStop())
         }
@@ -170,12 +200,13 @@ const Header = () => {
         <>
             <div className="header justify-center items-center">
 
-                <div className='headerTitle'>Sorting</div>
+                <div className='headerTitle'>{currentSort}</div>
 
                 <div
                     className='h-[80px] border-r-white border-l-white text-white flex flex-col text-sm mr-2 justify-center items-center border-2 border-b-0 border-t-0 border-l-0 pr-6'>
                     Generate New Array
-                    <button className="h-auto bg-white text-stone-950 mt-2 p-2.5 rounded-lg pl-0 pr-0 w-[100px]"
+                    <button className={`h-auto mt-2 p-2.5 rounded-lg pl-0 pr-0 w-[100px] ${sortingInProgress ? "bg-gray-500 text-white" : "bg-white text-stone-950" }`}
+                            disabled={sortingInProgress}
                             onClick={() => {
                                 generateArray()
                             }}>Generate
@@ -190,10 +221,13 @@ const Header = () => {
                     <div className="flex flex-row">
                         <form className="max-w-sm mt-2.5">
                             <select id="Sort"
-                                    className="bg-white-10  text-sm rounded-lg  block w-full p-2 text-black">
+                                    className="bg-white-10  text-sm rounded-lg  block w-full p-2 text-black" onChange={handleSortChange}
+                            >
 
-                                <option value="Bubble" selected>Bubble Sort</option>
-                                {/*<option value="Selection">Selection Sort</option>*/}
+                                <option value="Bubble" selected >Bubble Sort</option>
+                                <option value="Merge" >Merge Sort</option>
+                                <option value="Selection" >Selection Sort</option>
+                                {/*<option value="Insertion" >Insertion Sort</option>*/}
 
                             </select>
                         </form>

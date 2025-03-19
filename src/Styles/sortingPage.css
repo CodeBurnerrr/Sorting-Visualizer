@@ -32,14 +32,16 @@
 }
 
 .headerTitle{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     position: absolute;
-    left:10px;
+    left:25px;
     font-family: "Doto";
-    color: White;
+    color: #ffffff;
     font-size: 40px;
     font-weight: bold;
+
 }
 
 .button {
@@ -86,9 +88,7 @@
     transition: transform 1s ease-out;
 }
 
-.loader.slide-out {
-    transform: translateX(-100%);
-}
+
 
 
 .bar-sorted{
@@ -134,3 +134,16 @@
 }
 
 
+.bar-purple{
+    background-color: #ff50c7;
+}
+
+
+.bar-min{
+    background-color: #504e4e;
+}
+
+
+.bar-final{
+    background-color: #22ffc4;
+}

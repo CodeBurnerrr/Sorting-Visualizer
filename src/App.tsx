@@ -2,12 +2,16 @@ import Home from './pages/home.tsx'
 import SortingPage from "./pages/sortingPage.tsx";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import { Analytics } from "@vercel/analytics/react"
+import Particle from "./components/particles.tsx";
 
 function App() {
 
-
     return (
         <>
+
+            <div className={'animate-pulse'}>
+                <Particle/>
+            </div>
             <Analytics />
             <BrowserRouter>
                 <Routes>
@@ -16,8 +20,6 @@ function App() {
                     <Route path="*" element={<Home/>}/>
                 </Routes>
             </BrowserRouter>
-
-
         </>
     )
 }

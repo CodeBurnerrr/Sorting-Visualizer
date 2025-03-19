@@ -48,7 +48,7 @@ const Particle = () => {
                         quantity: 10,
                     },
                     repulse: {
-                        distance: 200,
+                        distance: 100,
                         duration: 0.8,
                     },
                 },
@@ -65,26 +65,26 @@ const Particle = () => {
                 //     width: 2,
                 // },
                 move: {
-                    direction: MoveDirection.none,
+                    direction: MoveDirection.bottom,
                     enable: true,
                     outModes: {
                         default: OutMode.out,
                     },
                     random: false,
-                    speed: 3,
+                    speed: 0.5,
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
                     },
-                    value: 350,
+                    value: 35,
                 },
                 opacity: {
                     value: 0.5,
                 },
                 shape: {
-                    type: "square",
+                    type: "circle",
                 },
                 size: {
                     value: {min: 1, max: 5},
