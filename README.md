@@ -9,9 +9,9 @@ Sorting Visualizer is an interactive web application built with React, TypeScrip
 - 🎨 **Interactive Visualization**: Watch how the algorithms sort arrays step-by-step.
 - ⚡ **Multiple Algorithms**: Includes popular sorting algorithms such as:
   - Bubble Sort
-  - Selection Sort (upcoming shortly!)
+  - Selection Sort 
   - Insertion Sort (upcoming shortly!)
-  - Merge Sort (upcoming shortly!)
+  - Merge Sort 
   - Quick Sort (upcoming shortly!)
 - 🛠️ **Customizability**:
   - Adjust the array size.
