@@ -13,6 +13,7 @@ import pauseIcon from '../assets/images/icons8-pause.svg'
 import playIcon from '../assets/images/icons8-play.svg'
 import {change as sortChange} from "../redux/slices/sortSelectSlice.ts";
 import {SelectionSort} from "../sortingAlgos/selectionSort.ts";
+import {InsertionSort} from "../sortingAlgos/insertionSort.ts";
 
 const Header = () => {
 
@@ -110,6 +111,11 @@ const Header = () => {
 
             case 'Selection':
                 result = SelectionSort(array.arr, length);
+                resultRef.current = result
+                break;
+
+            case 'Insertion':
+                result = InsertionSort(array.arr, length);
                 resultRef.current = result
                 break;
         }
@@ -227,7 +233,7 @@ const Header = () => {
                                 <option value="Bubble" selected >Bubble Sort</option>
                                 <option value="Merge" >Merge Sort</option>
                                 <option value="Selection" >Selection Sort</option>
-                                {/*<option value="Insertion" >Insertion Sort</option>*/}
+                                <option value="Insertion" >Insertion Sort</option>
 
                             </select>
                         </form>

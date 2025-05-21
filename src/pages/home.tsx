@@ -2,8 +2,8 @@ import '../Styles/home.css';
 import {useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 // import Particle from "../components/particles.tsx";
-import githubIcon from '../assets/images/icons8-github-48.svg';
-import linkedinIcon from '../assets/images/icons8-linkedin.svg';
+// import githubIcon from '../assets/images/icons8-github-48.svg';
+// import linkedinIcon from '../assets/images/icons8-linkedin.svg';
 
 const Home = () => {
     const [isSliding, setIsSliding] = useState(false);
@@ -47,7 +47,7 @@ const Home = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={githubIcon} alt="GitHub Icon"/>
+                            {/*<img src={githubIcon} alt="GitHub Icon"/>*/}
                         </a>
                     </div>
 
@@ -57,7 +57,7 @@ const Home = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={linkedinIcon} alt="LinkedIn Icon"/>
+                            {/*<img src={linkedinIcon} alt="LinkedIn Icon"/>*/}
                         </a>
                     </div>
                 </div>
