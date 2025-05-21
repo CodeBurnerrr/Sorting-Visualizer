@@ -79,9 +79,9 @@ export const SelectionSort = (
 
 
         // correct position
-        const flag:number = temp[i].value;
-        temp[i].value = temp[min_idx].value;
-        temp[min_idx].value = flag;
+        const flag:{ value: number; id: string; style: string } = temp[i];
+        temp[i] = temp[min_idx];
+        temp[min_idx] = flag;
 
 
 
